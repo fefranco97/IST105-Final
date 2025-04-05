@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $command = "python party_planner.py " . implode(" ", $selected_items);
+    $command = "python3 party_planner.py " . implode(" ", $selected_items);
     $output = shell_exec($command);
     $response = json_decode($output, true);
 
